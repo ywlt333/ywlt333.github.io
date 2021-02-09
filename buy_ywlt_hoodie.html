@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  </head>
+
+  <body>
+    <script src="https://www.paypal.com/sdk/js?client-id=AToTsYZwsQ4nh7wL80N0_QmSxnLC8nuGa9k4qirezdUyPBmcYBsvoMZS9tqYrXD3FNChg9yyI8Mc0ON_"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
+    </script>
+
+    <div>
+        <label for="size-select">size:</label>
+
+        <select name="size" id="size-select" onchange="getSize(this)">
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+            <option value="x-large">x-large</option>
+        </select>
+        <div id="paypal-button-container"></div>
+    </div>
+
+    
+
+    <!-- Add the checkout buttons, set up the order and approve the order -->
+    <script>
+        
+        // getSize function grabs size from select box, ONCHANGE 
+        function getSize(selectObject) {
+            
+            // clear paypal-button-container first
+            el = document.getElementById("paypal-button-container");
+            el.innerHTML = "";
+
+            //var e = document.getElementById("size-select");
+            var strSize = selectObject.value;
+            var strDescription = strSize + " " + "ywlt hoodie";
+            console.log(strDescription);
+
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                    amount: {
+                        currency_code: "USD",
+                        value: '70.00'
+                    },
+                    description: strDescription
+                    }]
+                });
+                },
+                onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+                }
+            }).render('#paypal-button-container'); // Display payment options on your web page
+
+
+        }
+
+        // // grabs size from select box, DEFAULT 
+        // var e = document.getElementById("size-select");
+        // var strSize = e.value;
+        // var strDescription = strSize + " " + "ywlt hoodie";
+        // console.log(strDescription);
+
+    </script>
+  </body>
+</html>
