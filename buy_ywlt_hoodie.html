@@ -2,24 +2,35 @@
 <html lang="en">
 <meta charset="UTF-8">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> Ensures optimal rendering on mobile devices. -->
+    <link rel="stylesheet" href="buy_ywlt_hoodie.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@openfonts/press-start-2p_all@1.44.2/index.min.css">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
   </head>
 
   <body>
     <script src="https://www.paypal.com/sdk/js?client-id=AToTsYZwsQ4nh7wL80N0_QmSxnLC8nuGa9k4qirezdUyPBmcYBsvoMZS9tqYrXD3FNChg9yyI8Mc0ON_"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
     </script>
 
-    <div>
-        <label for="size-select">size:</label>
+    <div class="wrapper">
+        <div class="page-main">
+            <div class="nes-container is-dark">
+                <!-- <p class="title">pick your size</p> -->
+                <!-- <label for="size-select"> <span class="nes-text is-success">pick your size</span></label> -->
+                <div class="nes-select is-dark">
+                    <select name="size" id="size-select" onchange="getSize(this)">
+                        <option value="" disable selected hidden>hoodie size...</option>
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                        <option value="x-large">x-large</option>
+                    </select>
+                </div>
+            </div>
+            <div id="paypal-button-container"></div>
+        </div>
 
-        <select name="size" id="size-select" onchange="getSize(this)">
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
-            <option value="x-large">x-large</option>
-        </select>
-        <div id="paypal-button-container"></div>
     </div>
 
     

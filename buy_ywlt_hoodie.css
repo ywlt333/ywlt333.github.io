@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+  }
+  
+  /* html, body {
+    overflow-y: hidden;
+ } */
+
+  body {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-image: url("IMG_4423_compressed_high.jpg");
+    background-size: contain;
+    font-family: "Press Start 2P";
+  }
+  
+  .wrapper > * {
+    padding: 20px;
+  }
+  
+  .page-header {
+    background: #592E83;
+  }
+  
+  .page-main {
+    flex-grow: 1;
+    /* background: #331E4D; */
+  }
+
+  #paypal-button-container {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: calc(100% - 100px);
+  }
+
+  
