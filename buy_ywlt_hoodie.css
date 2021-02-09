@@ -41,4 +41,8 @@
     width: calc(100% - 100px);
   }
 
+  select option[disabled] {
+    display: none;
+}
+
   
