@@ -19,6 +19,8 @@
     background-image: url("IMG_4423_compressed_high_small.jpg");
     background-size: contain;
     font-family: "Press Start 2P";
+    align-items: center;
+    justify-content: center;
   }
   
   .wrapper > * {
@@ -38,7 +40,7 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 50%;
+    width: 70%;
     /* width: calc(100% - 100px); */
   }
 
@@ -47,7 +49,28 @@
 }
 
 .detail-btn {
-    padding: 10px;
+    padding-top: 10px;
 }
+
+/* .red-btn {
+
+} */
+
+.size-select {
+    margin-top: 70% !important;
+}
+
+#detail-btn {
+    margin: 0 auto;
+    display: block;
+}
+
+/*on landscape push size selector higher on page*/
+@media (orientation: landscape) {
+    .size-select {
+        margin-top: 20% !important;
+    }
+  }
+  
 
   
