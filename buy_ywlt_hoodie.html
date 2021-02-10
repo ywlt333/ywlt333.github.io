@@ -27,6 +27,9 @@
                         <option value="x-large">x-large</option>
                     </select>
                 </div>
+                <div class="detail-btn">
+                    <button type="button" class="nes-btn is-primary detail-btn" id="detail-btn">details...</button>
+                </div>
             <!-- </div> -->
             <div id="paypal-button-container"></div>
         </div>
@@ -115,11 +118,11 @@
 
         }
 
-        // // grabs size from select box, DEFAULT 
-        // var e = document.getElementById("size-select");
-        // var strSize = e.value;
-        // var strDescription = strSize + " " + "ywlt hoodie";
-        // console.log(strDescription);
+        // detail button alert with hoodie info
+        document.getElementById("detail-btn").addEventListener("click", function() {
+        alert("hoodie info\n*extra good\n*that straight fiye\n*ultra premium gas\n*💜");
+        console.log("yo!")
+        });
 
     </script>
   </body>
