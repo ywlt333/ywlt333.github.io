@@ -47,7 +47,7 @@
 
             //var e = document.getElementById("size-select");
             var strSize = selectObject.value;
-            var strDescription = strSize + " " + "ywlt hoodie";
+            var strDescription = strSize + " " + "YWLT hoodie";
             console.log(strDescription);
 
             var FUNDING_SOURCES = [
@@ -78,7 +78,8 @@
                 },
                 onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
+                    // alert('Transaction completed by ' + details.payer.name.given_name);
+                    alert('your order will be shipped in 3-5 weeks -- thank you for your patience <3');
                 });
                 }
             });
