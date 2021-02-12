@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Buy the you were lied to black hoodie. The hoodie features an embroidered sleeve with 333 logo. $69 shipped.">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <link rel="stylesheet" href="buy_ywlt_hoodie.css">
+    <link rel="stylesheet" href="buy_ywlt_hoodie.css?v=1.0.1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@openfonts/press-start-2p_all@1.44.2/index.min.css">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
   </head>
@@ -18,9 +18,7 @@
 
     <div class="wrapper">
         <div class="page-main">
-            <!-- <div class="nes-container is-dark"> -->
-                <!-- <p class="title">pick your size</p> -->
-                <!-- <label for="size-select"> <span class="nes-text is-success">pick your size</span></label> -->
+            <div class="size-div">
                 <div class="nes-select is-dark size-select">
                     <select name="size" id="size-select" onchange="getSize(this)">
                         <option value="" disabled selected hidden>buy...</option>
@@ -34,7 +32,7 @@
                 <div class="detail-btn">
                     <button type="button" class="nes-btn is-error red-btn" id="detail-btn">info...</button>
                 </div>
-            <!-- </div> -->
+            </div>
             <div id="paypal-button-container"></div>
         </div>
 
@@ -60,9 +58,9 @@
             var FUNDING_SOURCES = [
                 paypal.FUNDING.PAYPAL,
                 paypal.FUNDING.VENMO,
-                paypal.FUNDING.PAYLATER
-                // paypal.FUNDING.CREDIT,
-                // paypal.FUNDING.CARD
+                paypal.FUNDING.PAYLATER,
+                paypal.FUNDING.CREDIT,
+                paypal.FUNDING.CARD
             ];
 
             // Loop over each funding source/payment method

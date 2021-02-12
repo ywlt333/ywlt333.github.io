@@ -10,17 +10,21 @@
     color: white;
     font-family: 'Courier New', Courier, monospace;
   }
+
+  label {
+      color: white !important;
+  }
   
   .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     background-image: url("IMG_4423_compressed_high_small.jpg");
     background-size: contain;
     font-family: "Press Start 2P";
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
   }
   
   .wrapper > * {
@@ -32,16 +36,31 @@
   }
   
   .page-main {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     /* background: #331E4D; */
   }
 
+  .size-div {
+    width: 66%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
   #paypal-button-container {
-    position: absolute;
+
+    padding-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    /* padding: 10px; */
+    /* position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 70%;
+    width: 70%; */
     /* width: calc(100% - 100px); */
+  }
+
+  #paypal-button-container > *{
+    background-color: rgb(255, 255, 255, 0.3);
   }
 
   select option[disabled] {
