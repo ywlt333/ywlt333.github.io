@@ -19,12 +19,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* max-height: 100vh; */
     background-image: url("IMG_4423_compressed_high_small.jpg");
     background-size: contain;
     font-family: "Press Start 2P";
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center;
   }
   
   .wrapper > * {
