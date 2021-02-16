@@ -19,7 +19,8 @@
     <div class="wrapper">
         <div class="page-main">
             <div class="size-div">
-                <div class="nes-select is-dark size-select">
+                <!-- size select -->
+                <!-- <div class="nes-select is-dark size-select">
                     <select name="size" id="size-select" onchange="getSize(this)">
                         <option value="" disabled selected hidden>buy...</option>
                         <option value="small">small</option>
@@ -27,6 +28,12 @@
                         <option value="large">large</option>
                         <option value="x-large">x-large</option>
                         <option value="xx-large">xx-large</option>
+                    </select>
+                </div> -->
+                <!-- out of stock size select -->
+                <div class="nes-select is-dark size-select">
+                    <select name="size" id="size-select-oos" onchange="getSize(this)" style="font-size: 12px;">
+                        <option value="" disabled selected hidden>out of stock...</option>
                     </select>
                 </div>
                 <div class="detail-btn">
